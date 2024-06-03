@@ -13,8 +13,6 @@ declare module 'vue' {
     Logo: typeof import('./src/components/icons/Logo.vue')['default']
     Map: typeof import('./src/components/game/map/Map.vue')['default']
     MapLine: typeof import('./src/components/game/map/MapLine.vue')['default']
-    MapLineLeft: typeof import('./src/components/game/map/MapLineLeft.vue')['default']
-    MapLineRight: typeof import('./src/components/game/map/MapLineRight.vue')['default']
     MenuHeader: typeof import('./src/components/MenuHeader.vue')['default']
     ModalBase: typeof import('./src/components/ModalBase.vue')['default']
     MPokemon: typeof import('./src/components/modals/MPokemon.vue')['default']

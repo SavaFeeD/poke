@@ -43,9 +43,9 @@ export const useOwnerStore = defineStore('owner', {
           this._owner = (!!findedOwner) ? findedOwner : null;
           
           if (!!findedOwner) {
-            return router.push('game');
+            return router.push(router.resolve({ name: 'game-map', params: { id: '1' } }).href);
           } else {
-            return router.push('login');
+            return router.push(router.resolve({ name: 'login' }).href);
           }
         }
 
@@ -56,9 +56,9 @@ export const useOwnerStore = defineStore('owner', {
           
           if (!!findedOwner) {
             localStorage.setItem("poke_owner", name);
-            return router.push('game');
+            return router.push(router.resolve({ name: 'game-map', params: { id: '1' } }).href);
           } else {
-            return router.push('login');
+            return router.push(router.resolve({ name: 'login' }).href);
           }
         }
         

@@ -14,9 +14,9 @@ const router = createRouter({
       component: () => import("@page/Login.vue"),
     },
     {
-      path: "/game",
-      name: "game",
-      component: () => import("@page/Game.vue"),
+      path: "/game/map/:id",
+      name: "game-map",
+      component: () => import("@/views/game/GMap.vue"),
     },
   ],
 });
