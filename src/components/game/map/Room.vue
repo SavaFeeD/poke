@@ -7,8 +7,26 @@ const props = defineProps<IProp>();
 </script>
 
 <template>
-  <div class="room" :title="state.toString()">
-    <img src="@/assets/images/battle.svg" alt="room" />
+  <div
+    class="room start-room"
+    title="start room"
+    v-if="state === 1"
+  >
+    <img src="@/assets/images/battle.svg" alt="start-room" />
+  </div>
+  <div
+    class="room finish-room"
+    title="finish room"
+    v-else-if="state === 2"
+  >
+    <img src="@/assets/images/battle.svg" alt="start-room" />
+  </div>
+  <div
+    v-else
+    class="room"
+    :title="state.toString()"
+  >
+    <img src="@/assets/images/battle.svg" alt="battle-room" />
   </div>
 </template>
 
@@ -35,5 +53,16 @@ const props = defineProps<IProp>();
     outline: 2px solid var(--primary-color);
     cursor: pointer;
   }
+}
+
+.start-room {
+  border: 1px solid #31c6b1;
+  width: 72px;
+  height: 72px;
+}
+.finish-room {
+  border: 1px solid #c64731;
+  width: 72px;
+  height: 72px;
 }
 </style>
